@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="styles.css" rel="stylesheet"/>
+		<title>Frontend Page Creation with Specific Elements</title>
+	</head>
+	<body>
+		<div class="main">
+			<h1 data-testid="slackUserName">Philip Nyakwaka</h1>
+			<img src="https://ca.slack-edge.com/T05FFAA91JP-U05R49AJA6S-76b931c77ec3-512" alt="Philip Nyakwaka" data-testid="slackDisplayImage"/>
+			<h2>Current Day of the Week:</h2>
+			<div data-testid="currentDayOfTheWeek" class="sub">Day</div>
+			<h2>Current UTC Time:</h2>
+			<div data-testid="currentUTCTime" id="ti" class="sub">16:22</div>
+			<h2>Track:</h2>
+			<div data-testid="myTrack" class="sub">Frontend</div>
+			<p><a href="https://github.com/philipnyakwaka1/front-end-stage_one" data-testid=“githubURL”>GitHub URL</a></p>
+		</div>
+	<script>
+		function updateDay()
+		{
+			const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+			const dateNow = new Date();
+			const dayOfWeek = daysOfWeek[dateNow.getUTCDay()];
+			const dayNow = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+			dayNow.textContent = dayOfWeek;
+		}
+		function updateTime()
+		{
+			const currentDate = new Date();
+			const currentTime = currentDate.getTime();
+			const timeNow = document.querySelector('[data-testid="currentUTCTime"]');
+			timeNow.textContent = currentTime;
+		}
+		updateDay();
+		updateTime();
+	</script>
+	</body>
+</html>

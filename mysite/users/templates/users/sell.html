@@ -1,0 +1,172 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- 
+<div class="home-container">
+<h1>Welcome to the Home Page</h1>
+<nav class="navbar">
+    <a class="nav-item" href="{% url 'register' %}">Sign Up</a>
+    <a class="nav-item" href="{% url 'login' %}">Sign In</a>
+    <a class="nav-item" href="{% url 'profile-view' %}">Profile</a>
+</nav>
+</div>
+-->
+<!-- Navbar Start -->
+
+<!-- Navbar End -->
+<div class="container-fluid services py-5" style=" margin-top: 0">
+<div class="container py-5" style=" margin-top: 0">
+  <div class="mx-auto text-center mb-5" style="max-width: 800px;">
+    <p class="fs-4 text-uppercase text-center text-primary">
+      What Would you like to sell
+    </p>
+  </div>
+  <div class="row g-4">
+    <div class="col-lg-6">
+      <div
+        class="services-item bg-light border-4 border-end border-primary rounded p-4"
+      >
+        <div class="row align-items-center">
+          <div class="col-8">
+            <div class="services-content text-end">
+              <h3>Dogs</h3>
+              <p>
+                Dogs are known for their loyalty and strong bonds with
+                their owners, providing constant companionship.
+              </p>
+              <a
+                href="{% url 'list-pet' %}"
+                class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4"
+                >Sell your Pet</a
+              >
+            </div>
+          </div>
+          <div class="col-4">
+            <div
+              class="services-img d-flex align-items-center justify-content-center rounded"
+            >
+              <img
+                src="{% static 'images/dogg.jpg' %}"
+                class="img-fluid rounded"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div
+        class="services-item bg-light border-4 border-start border-primary rounded p-4"
+      >
+        <div class="row align-items-center">
+          <div class="col-4">
+            <div
+              class="services-img d-flex align-items-center justify-content-center rounded"
+            >
+              <img
+                src="{% static 'images/kitty.jpg' %}"
+                class="img-fluid rounded"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="services-content text-start">
+              <h3>Cats</h3>
+              <p>
+                Cats are really low maintainance. Cats are generally more
+                independent and require less hands-on care compared to
+                some other pets
+              </p>
+              <a
+                href="{% url 'list-pet' %}"
+                class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4"
+                >Sell your pet</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div
+        class="services-item bg-light border-4 border-end border-primary rounded p-4"
+      >
+        <div class="row align-items-center">
+          <div class="col-8">
+            <div class="services-content text-end">
+              <h3>Birds</h3>
+              <p>
+                Birds, known for their ability to mimic sounds, can be
+                entertaining and provide companionship.
+              </p>
+              <a
+                href="{% url 'list-pet' %}"
+                class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4"
+                >Sell your pet</a
+              >
+            </div>
+          </div>
+          <div class="col-4">
+            <div
+              class="services-img d-flex align-items-center justify-content-center rounded"
+            >
+              <img
+                src="{% static 'images/birdd.jpg' %}"
+                class="img-fluid rounded"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div
+        class="services-item bg-light border-4 border-start border-primary rounded p-4"
+      >
+        <div class="row align-items-center">
+          <div class="col-4">
+            <div
+              class="services-img d-flex align-items-center justify-content-center rounded"
+            >
+              <img
+                src="{% static 'images/rabbit.jpg' %}"
+                class="img-fluid rounded"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="services-content text-start">
+              <h3>Rabbits</h3>
+              <p>
+                Caring for small animals can teach children responsibility
+                and empathy.
+              </p>
+              <a
+                href="{% url 'list-pet' %}"
+                class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4"
+                >Sell your pet</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="services-btn text-center">
+        <a
+          href="{% url 'list-pet' %}"
+          class="btn btn-primary btn-primary-outline-0 rounded-pill py-3 px-5"
+          >Tell us about your pet</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}
